@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giá cây cảnh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌱 QUẢN LÝ GIÁ CÂY CẢNH</h1>
+
+        <p>Quản lý thông tin và giá bán các loại cây cảnh</p>
+
+        <div class="form-box">
+
+            <h2>Thêm cây cảnh</h2>
+
+            <input type="text" id="maCay" placeholder="Mã cây">
+            <input type="text" id="tenCay" placeholder="Tên cây">
+            <input type="text" id="loaiCay" placeholder="Loại cây">
+            <input type="number" id="giaCay" placeholder="Giá bán">
+            <input type="number" id="soLuong" placeholder="Số lượng">
+
+            <button onclick="themCay()">Thêm cây</button>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="timKiem"
+                placeholder="🔍 Tìm kiếm cây cảnh..."
+                onkeyup="timKiemCay()"
+            >
+
+            <button onclick="sapXepGiaTang()">
+                Giá tăng dần
+            </button>
+
+            <button onclick="sapXepGiaGiam()">
+                Giá giảm dần
+            </button>
+
+        </div>
+
+        <div class="statistics">
+
+            <div>
+                <h3>Tổng số cây</h3>
+                <span id="tongCay">0</span>
+            </div>
+
+            <div>
+                <h3>Giá cao nhất</h3>
+                <span id="giaCaoNhat">0đ</span>
+            </div>
+
+            <div>
+                <h3>Giá thấp nhất</h3>
+                <span id="giaThapNhat">0đ</span>
+            </div>
+
+            <div>
+                <h3>Giá trung bình</h3>
+                <span id="giaTrungBinh">0đ</span>
+            </div>
+
+        </div>
+
+        <div class="table-box">
+
+            <h2>Danh sách cây cảnh</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã cây</th>
+                        <th>Tên cây</th>
+                        <th>Loại cây</th>
+                        <th>Giá bán</th>
+                        <th>Số lượng</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+
+                <tbody id="danhSachCay">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
